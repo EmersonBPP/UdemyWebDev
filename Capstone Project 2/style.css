@@ -1,0 +1,230 @@
+    @font-face {
+    font-family: 'Bricolage_Grotesque_regular';
+    src: url(fonts/Bricolage_Grotesque/static/BricolageGrotesque-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+   
+   @font-face {
+    font-family: 'Bree_Serif';
+    src: url(fonts/Bree_Serif/BreeSerif-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+   }
+
+
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      background-color: #4e6535;
+      color: white;
+      font-family: 'Bricolage_Grotesque_regular';
+      padding-top: 0;
+      padding-bottom: 0;
+      height: auto;
+      width: auto;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.2rem;
+    }
+
+    .navbar .logo img {
+      font-size: 1.5rem;
+      color: #ffffff;
+      height: 122px;
+      width: 110;
+      padding-right: 20px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      overflow: hidden;
+    }
+
+    .navbar ul li a {
+    display: block;
+    color: white;
+    background-color: #4e6535;
+    text-align: center;
+    padding: 20px 36px;
+    text-decoration: none;
+    transition: color 0.5s ease;
+    }
+
+    .navbar ul li a:hover {
+      color: #ce968b;
+      background-color: white;
+    }
+
+    .menu {
+        margin: 0;
+        padding: 0;
+        background-image: url('image/Pink_Blooming_Flowers.jpeg');
+        background-size: cover;         /* Makes image cover the entire screen */
+        background-position: center;    /* Centers the image */
+        background-repeat: no-repeat;   /* Prevents tiling */
+        height: 100vh; 
+        position: relative;
+    }
+
+    .perso-info {
+        color: white;
+        font-family: 'Bree_Serif';
+    }
+
+    .perso-info > h1 {
+      font-size: 86px;
+      margin-left: 30px;
+      margin-bottom: 28px;
+    }
+    
+     .perso-info > h2 {
+        font-size: 43px;
+        margin-left: 30px;
+    }
+
+
+    .yellow-flower {
+        height: 250px;
+        width: 250px;
+    }
+
+    .top-flower-container {
+        position: absolute;
+        right: 450px;
+        top: 25px;
+    }
+
+
+    .material {
+        color: rebeccapurple;
+        height: 100px;
+        width: auto;
+        background-color: aqua;
+    }
+
+    .yellow-flower-2 {
+        position: absolute;
+        left: 30px;
+        bottom: 80px;
+        height: 250px;
+        width: 250px;
+    }
+
+    .fern-size {
+        position: absolute;
+        bottom: 0px;
+        left: 370px;
+        height: 500px;
+        width: auto;
+    }
+
+    #resume {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f7f7f7;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .resume-container {
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    .profile-photo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+
+    .old-g {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 8px solid #ce968b;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin-bottom: 34px;
+    }
+
+    .resume-container > h3 {
+      font-family: 'Bricolage_Grotesque_regular';
+      font-size: 24px;
+      margin-bottom: 34px;
+      color: #a85140;
+    }
+
+    .resume-container > p {
+      font-family: 'Segoe UI';
+      font-size: 16px;
+      color: #888888;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    #project {
+      background-color: #a85140;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .project-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .project-container h2 {
+      font-family: 'Bree_Serif';
+      font-size: 80px;
+      margin-bottom: 40px;
+      color: white;
+      text-align: right;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 50px;
+    }
+
+    .project-item {
+      background: white;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: tranform 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .project-item p {
+      font-style: 16px;
+      color: #888888;
+    }
