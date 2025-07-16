@@ -284,10 +284,17 @@
   align-items: stretch;
 }
 
-.flex-image img {
+.flex-image img { 
   display: block;
   width: 100%;
   object-fit: cover;
+}
+
+.about-decor {
+  position: absolute;
+  right: 600px;
+  top: 25px;
+  
 }
 
 /* Responsivo */
@@ -309,3 +316,4 @@
     height: 300px;
   }
 }
+

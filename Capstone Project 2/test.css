@@ -1,68 +1,104 @@
-* {
-  margin: 0;
-  padding: 0;
+#contact {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
 }
 
-.flex-section {
-  background-color: #f9f9f9;
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
 }
 
-.flex-container {
+.contact-content {
   display: flex;
-  flex-direction: row;
-  gap: 0;
-  align-items: stretch;
-  flex-wrap: wrap; /* para permitir empilhar */
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
 }
 
-/* Coluna de texto */
-.flex-text {
+.contact-info {
   flex: 1;
-  background-color: aqua;
+  min-width: 300px;
 }
 
-.flex-text h2 {
-  font-size: 2.5rem;
-  color: #2d3e50;
+.contact-info p {
+  font-size: 1rem;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.flex-text p {
-  font-size: 1.1rem;
-  color: #444;
-  line-height: 1.8;
+.contact-list {
+  list-style: none;
+  padding: 0;
 }
 
-/* Coluna da imagem */
-.flex-image {
-  flex: 1;
-  overflow: hidden;
+.contact-list li {
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-.flex-image img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
+.contact-list img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
 
-/* Responsivo */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  flex: 1 1 100%;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #2d3e50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+button:hover {
+  background-color: #1a2b3c;
+}
+
 @media (max-width: 768px) {
-  .flex-container {
+  .contact-content {
     flex-direction: column;
-  }
-
-  .flex-text h2 {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .flex-text p {
-    text-align: center;
-  }
-
-  .flex-image img {
-    height: 300px;
   }
 }
