@@ -1,116 +1,68 @@
-.loading-scene {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-section {
+  background-color: #f9f9f9;
+}
+
+.flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: #111;
-  color: white;
-  font-family: sans-serif;
+  flex-direction: row;
+  gap: 0;
+  align-items: stretch;
+  flex-wrap: wrap; /* para permitir empilhar */
 }
 
-.stickman {
-  position: relative;
-  width: 20px;
-  height: 100px;
-  animation: bounce 1s infinite;
+/* Coluna de texto */
+.flex-text {
+  flex: 1;
+  background-color: aqua;
 }
 
-/* Head */
-.head {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: white;
-  position: absolute;
-  top: 0;
-  left: 0;
+.flex-text h2 {
+  font-size: 2.5rem;
+  color: #2d3e50;
+  margin-bottom: 20px;
 }
 
-/* Body */
-.body {
-  width: 4px;
-  height: 40px;
-  background: white;
-  position: absolute;
-  top: 20px;
-  left: 8px;
+.flex-text p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
 }
 
-/* Arms */
-.arm {
-  width: 30px;
-  height: 4px;
-  background: white;
-  position: absolute;
-  top: 30px;
-  transform-origin: left;
+/* Coluna da imagem */
+.flex-image {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
 }
 
-.left-arm {
-  left: -22px;
-  animation: punch-left 1s infinite;
+.flex-image img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
-.right-arm {
-  left: 10px;
-  animation: punch-right 1s infinite;
-}
+/* Responsivo */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
 
-/* Legs */
-.leg {
-  width: 4px;
-  height: 30px;
-  background: white;
-  position: absolute;
-  top: 60px;
-}
+  .flex-text h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
 
-.left-leg {
-  left: 2px;
-  transform: rotate(-15deg);
-  animation: kick-left 2s infinite;
-}
+  .flex-text p {
+    text-align: center;
+  }
 
-.right-leg {
-  left: 12px;
-  transform: rotate(15deg);
-  animation: kick-right 2s infinite;
-}
-
-/* Loading text */
-.loading-text {
-  margin-top: 20px;
-  font-size: 20px;
-  animation: blink 1.2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-@keyframes punch-left {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(-30deg); }
-}
-
-@keyframes punch-right {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(30deg); }
-}
-
-@keyframes kick-left {
-  0%, 100% { transform: rotate(-15deg); }
-  50% { transform: rotate(-45deg); }
-}
-
-@keyframes kick-right {
-  0%, 100% { transform: rotate(15deg); }
-  50% { transform: rotate(45deg); }
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+  .flex-image img {
+    height: 300px;
+  }
 }
