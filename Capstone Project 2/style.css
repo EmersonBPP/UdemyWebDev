@@ -317,3 +317,126 @@
   }
 }
 
+/* CONTACT */
+
+#contact {
+  padding: 60px 60px;
+  font-family: 'Segoe UI';
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 100px;
+  margin-top: 30px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.contact-container  h2{
+  font-size: 80px;
+  font-family: 'Bree_Serif';
+  text-align: left;
+  color: #a85140;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-list li a{
+  text-decoration: none;
+  color: #4e6535;
+  text-align: center;
+}
+
+.contact-list img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  flex: 1 1 100%;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #4e6535;
+  background-color: #4e653578;
+  color: white;
+}
+
+textarea::placeholder, input::placeholder {
+  color: white;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #4e6535;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+button:hover {
+  background-color: #4e653578;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+}
