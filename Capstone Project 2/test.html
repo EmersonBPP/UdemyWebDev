@@ -8,82 +8,20 @@
 </head>
 <body>
 
-<section id="contact">
-  <div class="contact-container">
+<div id="cookie-banner" style="position: fixed; bottom: 0; background: #eee; width: 100%; padding: 10px; text-align: center;">
+  Este site usa cookies para melhorar a experiência. <button onclick="acceptCookies()">Aceitar</button>
+</div>
 
-    <h2>Contact Us</h2>
+<script>
+  function acceptCookies() {
+    document.getElementById('cookie-banner').style.display = 'none';
+    localStorage.setItem('cookiesAccepted', 'true');
+  }
 
-    <div class="contact-content">
-
-      <!-- Coluna de informações -->
-      <div class="contact-info">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Aliquam lobortis mollis lacus, efficitur cursus diam fermentum in. 
-          Aliquam eget ipsum id tortor bibendum sagittis. 
-          Cras auctor velit sed turpis venenatis lobortis.
-        </p>
-
-        <ul class="contact-list">
-          <li>
-            <img src="image/phone-icon.svg" alt="Phone icon">
-            <a href="tel:213333212">213-333-212</a>
-          </li>
-          <li>
-            <img src="image/mail-icon.svg" alt="Email icon">
-            <a href="mailto:exemple@gmail.com">exemple@gmail.com</a>
-          </li>
-          <li>
-            <img src="image/location-icon.svg" alt="Location icon">
-            <span>Rua do Exemple, 23º Dt</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Coluna do formulário -->
-      <div class="contact-form">
-        <form>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="fname" placeholder="First">
-            </div>
-            <div class="form-group">
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lname" placeholder="Last">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group full-width">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group full-width">
-              <label for="tel">Phone (optional)</label>
-              <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xx">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group full-width">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Type your message ..."></textarea>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <button type="submit">Submit</button>
-          </div>
-        </form>
-      </div>
-
-  </div>
-</section>
-
+  if (localStorage.getItem('cookiesAccepted')) {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+</script>
 
 
 

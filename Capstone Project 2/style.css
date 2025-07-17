@@ -95,13 +95,13 @@
         font-family: 'Bree_Serif';
     }
 
-    .perso-info > h1 {
+    .perso-info  h1 {
       font-size: 86px;
       margin-left: 30px;
-      margin-bottom: 28px;
+      padding-bottom: 28px;
     }
     
-     .perso-info > h2 {
+     .perso-info  h2 {
         font-size: 43px;
         margin-left: 30px;
     }
@@ -142,6 +142,56 @@
         height: 500px;
         width: auto;
     }
+
+    /* Ícone do menu (hambúrguer) */
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+    
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .yellow-flower,
+      .yellow-flower-2,
+      .fern-size,
+      .top-flower-container img {
+        display: none;
+      }
+
+      .nav-things {
+        display: none;
+        flex-direction: column;
+        margin-right: 25%;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .logo img {
+      font-size: 1rem;
+      position: absolute;
+      top: 0;
+    }
+    }
+
+    /* ---------------- Responsivo ---------------- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-things {
+    display: none !important; /* Força mesmo que outro CSS tente sobrescrever */
+  }
+
+  .logo img {
+    display: none;
+  }
+}
 
     /* RESUME */
 
@@ -184,7 +234,7 @@
 
     .resume-container > p {
       font-family: 'Segoe UI';
-      font-size: 16px;
+      font-size: 1.1rem;
       color: #888888;
       line-height: 1.6;
       text-align: justify;
@@ -240,7 +290,7 @@
       color: #888888;
     }
 
-    /* ABOUT */
+/* ABOUT */
 
 .flex-section {
   background-color: #f9f9f9;
@@ -317,7 +367,7 @@
   }
 }
 
-/* CONTACT */
+/* CONTACT US */
 
 #contact {
   padding: 60px 60px;
@@ -338,10 +388,11 @@
 }
 
 .contact-info p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: justify;
+  color: #888888;
 }
 
 .contact-container  h2{
@@ -357,18 +408,24 @@
 .contact-list {
   list-style: none;
   padding: 0;
+  margin-top: 50px;
 }
 
 .contact-list li {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .contact-list li a{
   text-decoration: none;
   color: #4e6535;
   text-align: center;
+  transition: color 0.3s
+}
+
+.contact-list li a:hover{
+  color: #ce968b;
 }
 
 .contact-list img {
@@ -412,6 +469,7 @@ input, textarea {
   color: white;
 }
 
+
 textarea::placeholder, input::placeholder {
   color: white;
 }
@@ -429,6 +487,7 @@ button {
   border: none;
   cursor: pointer;
   width: fit-content;
+  transition: color 0.3s;
 }
 
 button:hover {
@@ -438,5 +497,125 @@ button:hover {
 @media (max-width: 768px) {
   .contact-content {
     flex-direction: column;
+  }
+}
+
+
+/* FOOTER */
+
+.footer {
+  position: relative;
+  background: 
+    linear-gradient(
+      to right,
+      #9db982, 
+      #6b8453, 
+      #587334);
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: 'Segoe UI';
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+
+  /* Máscara padrão */
+  mask-image: url('image/cenas.svg');
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  z-index: 1;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-columns h4 {
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-social-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-social-links ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+}
+
+.footer-social-links ul li a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.footer-social-links ul li a:hover img {
+  transform: scale(1.1);
+}
+
+.footer-bottom-copy {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #888888;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #444;
+  margin: 30px 0;
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-social-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    text-align: left;
   }
 }
