@@ -3,12 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Contact</title>
 </head>
 <body>
-    <h1>My contacts</h1>
-    <p>Av. Casa da minha casa</p>
-    <p>tel: 96123456</p>
-    <p>email: @taemborabom</p>
+        <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <div class="logo">
+            <a href="index.html"><img src="image/baguette.png" alt="baguette"></a>
+        </div>
+            <ul class="nav-things">
+                <li><b><a href="index.html">Menu</a></b></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    </nav>
+
+<section id="contact">
+  <div class="contact-container">
+
+    <h2>Contact Us</h2>
+
+    <div class="contact-content">
+
+      <!-- Coluna de informações -->
+      <div class="contact-info">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Aliquam lobortis mollis lacus, efficitur cursus diam fermentum in. 
+          Aliquam eget ipsum id tortor bibendum sagittis. 
+          Cras auctor velit sed turpis venenatis lobortis.
+        </p>
+
+        <ul class="contact-list">
+          <li>
+            <a href="tel:213333212">
+                <img src="image/phone-icon.svg" alt="Phone icon" height="60" width="60">213-333-212
+            </a>
+          </li>
+          <li>
+            <a href="mailto:exemple@gmail.com">
+                <img src="image/mail-icon.svg" alt="Email icon">exemple@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/maps?cid=4948293234082239069">
+                <img src="image/location-icon.svg" alt="Location icon">Rua do Exemple, 23º Dt
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Coluna do formulário -->
+      <div class="contact-form">
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="First">
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Last">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="tel">Phone (optional)</label>
+              <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xx">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Type your message ..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 </body>
 </html>

@@ -25,6 +25,25 @@
 
     /* MENU */
 
+    .scroll-whatcher {
+      height: 5px;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      background-color: #9db982;
+      width: 100%;
+      scale: 0 1;
+      transform-origin: left;
+      animation: scroll-whatcher linear;
+      animation-timeline: scroll();
+    }
+
+    @keyframes scroll-whatcher {
+      to { scale: 1 1;}
+    }
+
+
+
     .navbar {
       display: flex;
       justify-content: start;
@@ -151,35 +170,16 @@
       cursor: pointer;
     }
     
-    /* Responsivo */
-    @media (max-width: 768px) {
-      .yellow-flower,
-      .yellow-flower-2,
-      .fern-size,
-      .top-flower-container img {
-        display: none;
-      }
-
-      .nav-things {
-        display: none;
-        flex-direction: column;
-        margin-right: 25%;
-      }
-
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .logo img {
-      font-size: 1rem;
-      position: absolute;
-      top: 0;
-    }
-    }
-
     /* ---------------- Responsivo ---------------- */
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
+
+    .yellow-flower,
+    .yellow-flower-2,
+    .fern-size,
+    .top-flower-container img {
+        display: none;
+      }
+
   .hamburger {
     display: block;
   }

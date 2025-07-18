@@ -3,20 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <title>About</title>
 </head>
 <body>
-    <div class="ghostkit-form-field ghostkit-form-field-textarea">
-		<label class="ghostkit-form-field-label" for="gkt_form_fe8826db_field_message">
-            Message
-            <span class="required">
-                *
-            </span>				
-        </label>
-        <input type="hidden" name="field_message[label]" value="Message">
-        <textarea placeholder="Type your message ..." required="required" name="field_message[value]" id="gkt_form_fe8826db_field_message">
-            
-        </textarea>
+
+        <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <div class="logo">
+            <a href="index.html"><img src="image/baguette.png" alt="baguette"></a>
+        </div>
+            <ul class="nav-things">
+                <li><b><a href="index.html">Menu</a></b></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    </nav>
+
+<section id="flex-section" class="flex-section">
+    <div class="flex-container">
+    
+        <!-- Coluna de texto -->
+        <div class="flex-text">
+        <h2>About Me</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
+            Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
+            Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
+            Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+
+        </p>
+        </div>
+
+        <!-- Coluna da imagem -->
+        <div class="flex-image">
+        <img src="image/man-looking-up.jpg" alt="Imagem ilustrativa">
+        </div>
+
     </div>
+
+    <!-- Imagem decorativa à esquerda -->
+    <div class="about-decor">
+        <img src="image/purple-flower.png" alt="Flor grande decorativa" height="200" width="200">
+    </div>
+</section>
+
 </body>
 </html>
