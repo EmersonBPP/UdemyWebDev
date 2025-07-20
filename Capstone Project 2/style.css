@@ -515,7 +515,6 @@ button::after {
   height: 100%;
   width: 150%;
   z-index: -1;
-  border: 2px solid red;
   background-repeat: no-repeat;
 }
 
