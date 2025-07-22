@@ -185,7 +185,7 @@
   }
 
   .nav-things {
-    display: none !important; /* Força mesmo que outro CSS tente sobrescrever */
+    display: none !important;
   }
 
   .logo img {
@@ -312,7 +312,7 @@
   flex-direction: row;
   gap: 0;
   align-items: stretch;
-  flex-wrap: wrap; /* para permitir empilhar */
+  flex-wrap: wrap;
 }
 
 /* Coluna de texto */
@@ -699,17 +699,10 @@ hr {
 
 /* PARALLAX */
 .parallax {
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb'); /* substitui pela tua */
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-/* CONTEÚDO NORMAL */
-.content {
-  background-color: white;
-  padding: 60px 20px;
-  text-align: center;
 }
