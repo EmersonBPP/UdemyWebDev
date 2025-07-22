@@ -8,22 +8,19 @@
 </head>
 <body>
 
-<div id="cookie-banner" style="position: fixed; bottom: 0; background: #eee; width: 100%; padding: 10px; text-align: center;">
-  Este site usa cookies para melhorar a experiência. <button onclick="acceptCookies()">Aceitar</button>
+<div class="body">
+  <div class="glass-box">
+    <h2>Liquid Glass Effect</h2>
+    <p>Texto com fundo tipo vidro fosco.</p>
+  </div>
 </div>
 
-<script>
-  function acceptCookies() {
-    document.getElementById('cookie-banner').style.display = 'none';
-    localStorage.setItem('cookiesAccepted', 'true');
-  }
+<section class="parallax"></section>
 
-  if (localStorage.getItem('cookiesAccepted')) {
-    document.getElementById('cookie-banner').style.display = 'none';
-  }
-</script>
-
-
+<section class="content">
+  <h2>Conteúdo Fixo</h2>
+  <p>Este texto fica em cima do efeito parallax.</p>
+</section>
 
 
 </body>

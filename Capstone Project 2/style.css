@@ -696,3 +696,20 @@ hr {
     text-align: left;
   }
 }
+
+/* PARALLAX */
+.parallax {
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb'); /* substitui pela tua */
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* CONTEÚDO NORMAL */
+.content {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
