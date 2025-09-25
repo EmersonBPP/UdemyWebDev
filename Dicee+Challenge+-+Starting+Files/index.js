@@ -20,4 +20,4 @@ function rollDices() {
 rollDices();
 
 // Run again when button is clicked
-document.querySelector("button").addEventListener("click", rollDice);
+document.querySelector("button").addEventListener("click", rollDices);
