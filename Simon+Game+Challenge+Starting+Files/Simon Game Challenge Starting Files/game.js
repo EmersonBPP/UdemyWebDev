@@ -14,7 +14,7 @@ var level = 0;
 // Event listener for any key press to start the game
 $(document).keypress(function() {
   if (!started) {
-    $("#level-title").text("Level " + level);
+    $("h1").text("Level " + level);
     nextSequence();
     started = true;
   }
@@ -51,7 +51,7 @@ function checkAnswer(currentLevel) {
     playSound("wrong");
     // Add visual feedback for game over
     $("body").addClass("game-over");
-    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("h1").text("Game Over, Press Any Key to Restart");
 
     // Remove the game-over styling after 200ms
     setTimeout(function () {
@@ -70,7 +70,7 @@ function nextSequence() {
   // Increment the level
   level++;
   // Update the level display
-  $("#level-title").text("Level " + level);
+  $("h1").text("Level " + level);
   // Generate a random number between 0-3
   var randomNumber = Math.floor(Math.random() * 4);
   // Get the corresponding color from the array
