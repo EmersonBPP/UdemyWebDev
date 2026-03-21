@@ -1,26 +1,24 @@
 /* 
 1. Use the inquirer npm package to get user input.
 */
+
 import inquirer from 'inquirer';
 import qr from 'qr-image';
 import fs from 'fs';
 
 inquirer
   .prompt([
-    {"message":"Enter a URL to generate a QR code:",
-      "name":"url",
-      "type":"input"
-    }
+    /* Pass your questions in here */
+    {
+    message: "Por favor introduzir o seu URL:",
+    name: "URL",
+    },
   ])
   .then((answers) => {
-    const url = answers.url;
-    var qr_svg = qr.image(url);
-    qr_svg.pipe(fs.createWriteStream('qr_img.png'));
+    // Use user feedback for... whatever!!
+    const url = answers.URL;
+    
 
-    fs.writeFile('URL.txt', url, (err) => {
-      if (err) throw err;
-      console.log('The URL has been saved to URL.txt');
-    });
   })
   .catch((error) => {
     if (error.isTtyError) {
