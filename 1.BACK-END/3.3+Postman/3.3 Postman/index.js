@@ -19,10 +19,12 @@ app.post("/register", (req, res) => {
 });
 
 app.put("/user/angela", (req, res) => {
+  //Do something with the data
   res.sendStatus(200);
 });
 
 app.patch("/user/angela", (req, res) => {
+  //Do something with the data
   res.sendStatus(200);
 });
 
